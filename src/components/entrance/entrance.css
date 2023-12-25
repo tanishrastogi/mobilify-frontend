@@ -1,0 +1,120 @@
+body{
+    background: #edadad20;
+}
+
+.loginform-container{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background: #00000013;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.login-form input, .login-form button{
+    margin: 30px 0 0 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.login-form button{
+    width: 90%;
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.707);
+}
+
+.login-form input:focus{
+    border:1px solid black;
+    transform: scale(1.04);
+    transition: 100ms ease-in;
+}
+
+.login-form span{
+    align-self: center;
+    margin: 25px 0 30px 0;
+}
+
+.login-form span:hover{
+    cursor: pointer;
+}
+
+.login-form button:nth-last-child(-n+3){
+    width: 85%;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form button:nth-last-child(-n+3) span{
+    /* background: #000; */
+    margin: 0 10px;
+
+}
+
+.login-with-google:hover{
+    background: red;
+    color: white;
+    font-weight: bolder;
+    border: 1.5px solid rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: 1px 1px 5px red;
+    transition: 300ms ease-out;
+}
+
+.login-with-github:hover{
+    background: rgb(0, 0, 0);
+    color: white;
+    font-weight: bolder;
+    border: 1.5px solid rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: 3px 3px 15px rgb(66, 65, 65);
+    transition: 300ms ease-out;
+}
+
+.login-with-facebook:hover{
+    background: rgb(27, 15, 195);
+    color: white;
+    font-weight: bolder;
+    border: 1.5px solid rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: 1px 1px 5px rgb(0, 200, 255);
+    transition: 300ms ease-out;
+}
+
+.submit-button:hover{
+    background: rgb(27, 15, 195);
+    color: white;
+    font-weight: bolder;
+    border: 1.5px solid rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: 1px 1px 5px rgb(0, 200, 255);
+    transition: 300ms ease-out;
+}
+
+
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%; /* Adjust the width for smaller screens */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.8);
+    }
+
+    .login-form input, .login-form button{
+        width: 75%;
+    }
+
+    
+  }

@@ -1,0 +1,66 @@
+.mail-box{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 45px 65px 45px ;
+    box-shadow: 1px 1px 5px black;
+    height: 500px;
+    border-radius: 20px;
+    background: #060b26e5;
+    color: white;
+    width: 25vw;
+    line-height: 1.7;
+
+    margin: 25px auto;
+}
+
+.mail-box input{
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 80%;
+    align-self: center;
+}
+
+.mail-box form{
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-box form textarea{
+    padding: 15px;
+    /* margin: 15px; */
+    width: 80%;
+    align-self: center;
+    border-radius: 10px;
+}
+
+
+.submit-button{
+    
+    width:fit-content;
+    align-self: center;
+    padding:10px 25px;
+    margin: 20px 0 0 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px white;
+    transition: transform 0.2s ease-in ;
+}
+
+.submit-button:hover{
+    background: #060b26;
+    color: white;
+    transform: scale(1.1);
+}
+
+.submit-button:active{
+    transform: scale(0.95) perspective(1000px) rotateX(5deg);
+    background: #060b26;
+    color: white;
+}
+
+@media (max-width: 768px){
+    .mail-box{
+        width: 100%;
+        height: 100%;
+    }
+}
