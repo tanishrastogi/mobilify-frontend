@@ -38,7 +38,7 @@ const Login = () => {
             alert("fill all the details")
         }
         else{
-            const res = await fetch("/skillapp/login" , {
+            const res = await fetch("http://localhost:8005/skillapp/login" , {
                 method:"POST",
                 headers:{
                     "Content-type":"application/json"
@@ -48,13 +48,14 @@ const Login = () => {
             
             
             const data = await res.json();
+
+             console.log(data);
+
             if(res.status==201){
                 alert("Login Successfull! Redirecting to your app!");
-                console.log(data);
                 login();
                 setAccount(data);
-                console.log(data);
-                history(`/${data['User']['username']}`);
+                history(`/${data['username']}`);
             }
         }
 

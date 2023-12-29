@@ -24,7 +24,7 @@ const SignUp = () => {
         else {
             if (password == cpassword) {
                 try {
-                    const res = await fetch("https://mobilehub-0054a.onrender.com/skillapp/signup", {
+                    const res = await fetch("https://mobilehub.onrender.com/skillapp/signup", {
                         method: "POST",
                         headers: {
                             "content-type": "application/json"
@@ -64,13 +64,13 @@ const SignUp = () => {
 
     return <div style={{ height: "100vh" }} className="loginform-container">
         <div className="login-form">
-            <form method="POST" action="">
+            
                 <input type="text" value={logData.email} onChange={addData} required name="email" placeholder="Enter Email " />
                 <input type="text" value={logData.username} onChange={addData} name="username" placeholder="Enter Username " />
                 <input type="password" value={logData.password} onChange={addData} name="password" placeholder="password" />
                 <input type="password" value={logData.cpassword} onChange={addData} name="cpassword" placeholder="confirm password" />
                 <button style={{ margin: "20px  0 30px 0" }} onClick={handleSubmit} className="signup-button submit-button">Sign Up &rarr;</button>
-            </form>
+            
             <span style={{ color: "rgb(84, 82, 82)", fontSize: "70%", margin: "-0px 0 10px 0" }}>Already have an account? Click here to <NavLink to="/login">Login</NavLink>. </span>
             <button className="login-with-google"><GoogleIcon /><span>Continue With Google</span></button>
             <button className="login-with-github"><GitHubIcon /><span>Continue With Github</span></button>
