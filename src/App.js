@@ -11,11 +11,13 @@ import User from './components/users/user';
 import AboutContent from './components/about_and_contact/aboutContent';
 import SearchBar from './components/homepage/searchbar';
 import Homepage from './components/homepage/homepage';
+import Slide from './components/homepage/slide';
+// import { Slide } from '@mui/material';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<div className="home-page"><Navbar /><SearchBar /><Homepage /></div>}/>
+      <Route path="/" element={<div className="home-page"><Navbar /><SearchBar /><Homepage /><Slide /></div>}/>
       <Route path='/login' element={<div><Login /></div>} />
       <Route path='/signup' element={<div><SignUp /></div>} />
       <Route path='/contact' element={<div ><MailBox /></div>}/>

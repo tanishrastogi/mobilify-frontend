@@ -1,4 +1,8 @@
 import React from "react";
+import { testimonials } from "./testimonials";
+import  Carousel  from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
+import "./slide.css";
 
 const Slide = ()=>{
 
@@ -24,7 +28,22 @@ const Slide = ()=>{
         }
     };
 
-    return ;
+    
+
+
+    
+
+    return <Carousel responsive={responsive} className="slide-container" infinite>
+        {
+            testimonials.map((testimonial)=>{
+                return <div className="testimonial-container">
+                    <p style={{fontWeight:"bolder"}}>{testimonial.name}</p>
+                    <p  >{testimonial.rating}</p>
+                    <p >{testimonial.review}</p>
+                </div>
+            })
+        }
+    </Carousel> ;
 }
 
 export default Slide;
