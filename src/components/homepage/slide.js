@@ -1,11 +1,29 @@
 import React from "react";
 import { testimonials } from "./testimonials";
-import  Carousel  from "react-multi-carousel";
+import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 import "./slide.css";
+import RatingStars from "react-rating-stars-component";
+// import CustomLeftArrow from "./arrows/customLeftArrow";
+// import CustomRightArrow from "./arrows/customRightArrow";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const Slide = ()=>{
 
+const Slide = () => {
+
+    
+    // const CustomRightArrow = ()=>{
+    //     return <div onClick={onclick}>
+    //         <ChevronRightIcon style={{ position:"absolute" , right:"0" , transform:"scale(1.5)"}}/> 
+    //     </div>
+    
+    // }
+
+    // const CustomLeftArrow = ()=>{
+    //     return <div>
+
+    //     </div>
+    // }
     
 
     const responsive = {
@@ -28,22 +46,38 @@ const Slide = ()=>{
         }
     };
 
-    
 
 
-    
 
-    return <Carousel responsive={responsive} className="slide-container" infinite>
+
+
+    return <Carousel
+        responsive={responsive}
+        className="slide-container"
+        infinite
+        
+        // customLeftArrow={<CustomLeftArrow />}
+        // customRightArrow={<CustomRightArrow />}
+        >
         {
-            testimonials.map((testimonial)=>{
+            testimonials.map((testimonial) => {
                 return <div className="testimonial-container">
-                    <p style={{fontWeight:"bolder"}}>{testimonial.name}</p>
-                    <p  >{testimonial.rating}</p>
+                    <p style={{ fontWeight: "bolder" }}>{testimonial.name}</p>
+                    <div className="rating-container">
+                        <RatingStars
+                            count={5}
+                            size={24}
+                            value={testimonial.rating}
+                            edit={false}
+                            isHalf={true}
+                        />
+                        <p  >{testimonial.rating}</p>
+                    </div>
                     <p >{testimonial.review}</p>
                 </div>
             })
         }
-    </Carousel> ;
+    </Carousel>;
 }
 
 export default Slide;

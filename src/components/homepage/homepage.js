@@ -2,6 +2,10 @@ import React from "react";
 import "./home.css";
 import img from "./images/samsungimage1.png"
 import img_m from "./images/samsungimage1_mobile.png";
+import img2 from "./images/Picture1.jpg"
+
+import Slide from "./slide";
+import Tabs1 from "./tabs";
 
 const Homepage = () => {
     return <div>
@@ -13,7 +17,14 @@ const Homepage = () => {
                 <img src={img_m}></img>
             </div>
         </div>
-        <div className="phone_container1"></div>
+        <div className="testimonial-slide">
+            <Slide />
+        </div>
+        <div className="image-container">
+            <img src={img2}></img>
+        </div>
+            <Tabs1 />
+
     </div>
 }
 

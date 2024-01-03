@@ -17,12 +17,12 @@ import Slide from './components/homepage/slide';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<div className="home-page"><Navbar /><SearchBar /><Homepage /><Slide /></div>}/>
+      <Route path="/" element={<div className="home-page"><Navbar /><SearchBar /><Homepage /><Footer /></div>}/>
       <Route path='/login' element={<div><Login /></div>} />
       <Route path='/signup' element={<div><SignUp /></div>} />
       <Route path='/contact' element={<div ><MailBox /></div>}/>
       <Route path='/:username' element={<div><User /></div>} />
-      <Route path='/about' element={<div><Navbar /><AboutContent /><Footer /></div>}/>
+      <Route path='/about' element={<div><Navbar /><AboutContent /><Slide /><Footer /></div>}/>
     </Routes>
   );
 }

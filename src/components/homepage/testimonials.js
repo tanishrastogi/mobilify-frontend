@@ -16,7 +16,7 @@ export const testimonials = [
     },
     {
         name:`Emily Rhodes`,
-        rating:4.5,
+        rating:4.8,
         review:`The mobile shop has a fantastic collection of the latest smartphones. The product descriptions were helpful, and the checkout process was hassle-free.`
     },
     {

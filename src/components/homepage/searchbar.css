@@ -14,13 +14,50 @@
     /* margin: 40px 0 100px 0; */
 }
 
+.search-bar-left{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-icon{
+    margin: 7px 0 0 -35px;
+}
+
+
+
+
 .search-bar-right{
     align-self: center;
     justify-self: center;
 }
 
-@media (max-width:600px) {
+.search-bar-middle{
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar-middle li{
+    margin: 0 20px 0 20px ;
+    list-style: none;
+    cursor: pointer;
+}
+
+.search-bar-middle li:hover{
+
+    transform: scale(1.2);
+}
+
+.search-bar-middle li:active{
+    transform: scale(0.8);
+    transition: transform 0.4s ease-in;
+}
+
+@media (max-width:792px) {
     .search-bar-input{
         width: 40vw;
+    }
+
+    .display-none{
+        display: none;
     }
 }

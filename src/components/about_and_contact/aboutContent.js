@@ -13,7 +13,9 @@ const AboutContent = () => {
         <div className="right">
             <MailBox />
         </div>
-        
+        <div>
+            
+        </div>
     </div>
     </div>
 }
