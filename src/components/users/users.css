@@ -1,0 +1,53 @@
+.user_page_container{
+    height: 100vh;
+}
+
+.dropDown{
+
+    background: #060b263a;
+    width: 250px;
+    /* padding: 10px; */
+    /* height: 150px; */
+    margin: -25px 0 0 30px;
+    position: absolute;
+    /* left: -100%; */
+    opacity: 0;
+    box-shadow: 1px 1px 5px black;
+    user-select: none;
+    transition: 200ms ease-in-out;
+}
+
+
+.dropDown.active{
+    left: 0;
+    opacity: 1;
+    /* transform: 350ms; */
+}
+
+.dropDown ul li{
+    padding: 10px 20px;
+    /* background: pink; */
+    margin: 5px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropDown li:hover{
+    background: white;
+}
+
+.dropDown li:active{
+    transform: scale(0.8);
+    transition:200ms ease-in-out;
+    background: rgb(129, 127, 127);
+
+}
+
+
+
+.dropDown ul{
+    padding: 0;
+}

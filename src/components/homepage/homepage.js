@@ -2,7 +2,9 @@ import React from "react";
 import "./home.css";
 import img from "./images/samsungimage1.png"
 import img_m from "./images/samsungimage1_mobile.png";
-import img2 from "./images/Picture1.jpg"
+import img2 from "./images/Picture1.jpg";
+import img2_m from "./images/picture1_m.avif";
+
 
 import Slide from "./slide";
 import Tabs1 from "./tabs";
@@ -23,7 +25,9 @@ const Homepage = () => {
         <div className="image-container">
             <img src={img2}></img>
         </div>
-            <Tabs1 />
+        <div className="image-container-m">
+            <img src={img2_m}></img>
+        </div>
 
     </div>
 }

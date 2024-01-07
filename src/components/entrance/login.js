@@ -38,7 +38,7 @@ const Login = () => {
             alert("fill all the details")
         }
         else{
-            const res = await fetch("http://localhost:8005/skillapp/login" , {
+            const res = await fetch("http://localhost:8005/login" , {
                 method:"POST",
                 headers:{
                     "Content-type":"application/json"
@@ -48,7 +48,7 @@ const Login = () => {
             
             
             const data = await res.json();
-
+            localStorage.setItem('account' , JSON.stringify(data));
              console.log(data);
 
             if(res.status==201){
