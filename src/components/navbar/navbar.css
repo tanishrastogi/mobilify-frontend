@@ -2,13 +2,13 @@
 
 
 .navbar{
-    background-color: #060b26;
+    /* background-color: #060b26; */
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
     align-items: center;
-    box-shadow: 1px 1px 15px black;
+    /* box-shadow: 1px 5px 15px black; */
     font-family: 'Ubuntu', sans-serif;
     /* width: 100%; */
 

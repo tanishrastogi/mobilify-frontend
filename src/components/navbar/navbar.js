@@ -7,57 +7,21 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import styled from "@emotion/styled";
 import Footer from "../homepage/footer";
 import SearchBar from "../homepage/searchbar";
+import MySideBar from "./side_Bar";
 
 const Navbar = () => {
 
-    const [sideBar, setSideBar] = useState(false);
+    
 
-    const handleSideBar = () => {
-        setSideBar(!sideBar)
-    };
-
-    const HoverMenuIcon = styled(MenuIcon)({
-        cursor: 'pointer',
-        transition: 'transform 0.3 ease',
-        "&:hover": {
-            transform: 'scale(1.2)'
-        }
-    });
+    
 
 
-    const HoverCancelIcon = styled(CancelIcon)({
-        cursor: 'pointer',
-        transition: 'transform 0.3 ease',
-        "&:hover": {
-            transform: 'scale(1.2)'
-        }
-    });
+    
 
 
+    return <div className="navbar" style={{boxShadow:"1px 5px 15px black" , background:"#060b26"}}>
 
-    return <div className="navbar" >
-        <HoverMenuIcon onClick={handleSideBar} />
-
-        <div className="hidden-navbar" >
-            <nav style={{ boxShadow: "5px 1px 25px black" }} className={sideBar ? 'nav-menu active' : 'nav-menu'}>
-                <div className="cancelIcon">
-                    <HoverCancelIcon onClick={handleSideBar} sx={{ cursor: "pointer", "&:hover": { transform: "scale:(1.2)" } }} />
-                </div>
-                <ul className="nav-menu-items">
-                    {SideBar.map((item, index) => {
-                        return (
-                            <li key={index} onClick={handleSideBar} className={item.cName + " hiddenNav-item"}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
-                                </Link>
-                            </li>
-                        )
-                    })}
-
-                </ul>
-            </nav>
-        </div>
+        <MySideBar />    
         <h2>Mobile Hub</h2>
 
 
