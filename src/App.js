@@ -12,7 +12,6 @@ import AboutContent from './components/about_and_contact/aboutContent';
 import SearchBar from './components/homepage/searchbar';
 import Homepage from './components/homepage/homepage';
 import Slide from './components/homepage/slide';
-// import { Slide } from '@mui/material';
 
 function App() {
   return (
